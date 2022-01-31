@@ -1,18 +1,19 @@
 import React from 'react';
 
-let NumberInput = () => {
-
+let NumberInput = (props) => {
+    const {name, label} = props;
     return (
-        <label htmlFor='x'>
-            Prvé číslo
+        <label htmlFor={name}>
+            {label}
             <input
-                id="x"
+                onChange={props.onChange}
+                id={name}
                 type="number"
-                name="x"
+                name={name}
                 required
-                value="0"
             />
         </label>
     )
 }
+
 export default NumberInput;

@@ -1,6 +1,14 @@
 import React from 'react';
 
-const Result = () => {
-    return <div className="Result">Výsledok je: 10</div>;
-};
+const Result = (props) =>
+{
+
+    const result = props.x;
+
+    if (result || result === 0)
+        return <div className="Result">Výsledok je: {props.x}</div>
+    else
+        return <div>Nebol zatiaľ vypočítaný výsledok</div>
+}
+
 export default Result;
